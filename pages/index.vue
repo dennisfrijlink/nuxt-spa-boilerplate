@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    Nuxt.js SPA
+  </div>
 </template>
 
 <script>
