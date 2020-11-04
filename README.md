@@ -40,6 +40,7 @@ assets
     │
     └─── breakpoints.scss
 ```
+### Usage
 Building responsive websites is a must-have skill for front-end developers today, so we've made the breakpoints mobile first. They are all defined with a ``@media (min-width:``  so that the main css you write is based on mobile screens.
 ````
 /* Small (sm) */
