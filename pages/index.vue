@@ -1,6 +1,6 @@
 <template>
   <div>
-    Nuxt.js SPA
+    Nuxt.js SPA Boilerplate
   </div>
 </template>
 
