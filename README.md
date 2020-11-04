@@ -29,7 +29,7 @@ $ npm run start
 $ npm run generate
 ```
 ## Breakpoints mobile first
-The scss folder locatied in  ``./assets/scss/``  contains two files to make it easier for web developers to prototype, build, scale, and maintain CSS for responsive websites:
+The scss folder located in  ``./assets/scss/``  contains two files to make it easier for web developers to prototype, build, scale, and maintain CSS for responsive websites:
 ### SCSS Files
 ```
 assets
