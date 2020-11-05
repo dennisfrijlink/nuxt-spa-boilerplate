@@ -43,7 +43,7 @@
     ```bash
     $ npm run generate
     ```
-## Breakpoints mobile first
+## 📱 Breakpoints mobile first
 The scss folder located in  ``./assets/scss/``  contains two files to make it easier for web developers to prototype, build, scale, and maintain CSS for responsive websites:
 ### SCSS Files
 ```
@@ -146,7 +146,7 @@ As a parameter `$screen` we can put any screen size.
 }
 ````
 
-## Nuxt-i18n
+## 💬 Nuxt-i18n
 Nuxt-I18n is the Vue.js internationalization plugin optimized for using in Nuxt.js. The configuration of the languages is defined in the ``nuxt.config.js`` file:
 ```js
 // nuxt.config.js
