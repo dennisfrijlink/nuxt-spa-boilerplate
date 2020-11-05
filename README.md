@@ -15,6 +15,9 @@
 - [Multi Language](#nuxt-i18n)
 
 ## Build Setup
+
+**Requires Node.js 8+**
+
 ```bash
 # install dependencies
 $ npm install
