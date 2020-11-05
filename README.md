@@ -11,7 +11,7 @@
 </p>
 
 ## 🧐 What's inside
-- [Build Setup](#build-setup)
+- [Quick start](#quick-start)
 - [Mobile First](#breakpoints-mobile-first)
 - [Multi Language](#nuxt-i18n)
 
