@@ -11,9 +11,9 @@
 </p>
 
 ## 🧐 What's inside
-- [Quick start](#quick-start)
-- [Mobile First](#breakpoints-mobile-first)
-- [Multi Language](#nuxt-i18n)
+- [Quick start](#user-content--quick-start)
+- [Mobile First](#user-content--breakpoints-mobile-first)
+- [Multi Language](#user-content--nuxt-i18n)
 
 ## ✨ Quick start
 
