@@ -1,37 +1,48 @@
 
 <p align="center">
-  <br>
   <img width="400" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/main/images/Nuxt-Spa.svg" alt="logo of Nuxt Single Page Application Repository">
-  <br>
-  <br>
+</p>
+<h1 align="center">
+  Single Page Application Boilerplate - Nuxt.js
+</h1>
+<p align="center">
+  A boilerplate for single page applications based on the Vue.js Framework, Nuxt.js
+  </a>
 </p>
 
-# Single Page Application Boilerplate - Nuxt.js
-> A boilerplate for single page applications based on the Vue.js Framework, Nuxt.js
-
-## Contents
+## 🧐 What's inside
 - [Build Setup](#build-setup)
 - [Mobile First](#breakpoints-mobile-first)
 - [Multi Language](#nuxt-i18n)
 
-## Build Setup
+## ✨ Quick start
 
-**Requires Node.js 8+**
+1.  **Clone this repository.**
 
-```bash
-# install dependencies
-$ npm install
+    ```sh
+    git clone https://github.com/dennisfrijlink/nuxt-spa-boilerplate.git
+    ```
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+2.  **Start developing.**
 
-# build for production and launch servåer
-$ npm run build
-$ npm run start
+    Navigate into your new site’s directory and start it up.
 
-# generate static project
-$ npm run generate
-```
+    ```sh
+    cd nuxt-spa-boilerplate/
+    npm install
+    npm run dev
+    ```
+
+3.  **Running!**
+
+    Your site is now running at `http://localhost:3000`!
+
+4.  **Generate for deploy**
+    
+    Generate a static project that will be located in the ``dist`` folder:
+    ```bash
+    $ npm run generate
+    ```
 ## Breakpoints mobile first
 The scss folder located in  ``./assets/scss/``  contains two files to make it easier for web developers to prototype, build, scale, and maintain CSS for responsive websites:
 ### SCSS Files
