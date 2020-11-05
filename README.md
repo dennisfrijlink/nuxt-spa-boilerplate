@@ -22,7 +22,7 @@ $ npm install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
+# build for production and launch servåer
 $ npm run build
 $ npm run start
 
@@ -42,7 +42,7 @@ assets
     └─── breakpoints.scss
 ```
 Building responsive websites is a must-have skill for front-end developers today, so we've made the breakpoints mobile first. They are all defined with a ``@media (min-width:``  so that the main css you write is based on mobile screens.
-````css
+````scss
 // breakpoints.scss
 
 
@@ -60,7 +60,7 @@ $screen-xl-min: 1280px;
 ````
 
 Now it’s time to create the most important element – mixins:
-````css
+````scss
 // _mixins.scss
 
 
@@ -94,7 +94,7 @@ Now it’s time to create the most important element – mixins:
 ````
 
 I always build my websites in a mobile-first approach, so I don’t need to define the smallest screen size (xs – extra small) and I write my SCSS code first for the smallest devices and next for the largest. Sometimes we also need to define some styles beyond the rigidly defined breakpoints. Let’s add one more mixin – I called it “rwd”:
-````css
+````scss
 // _mixins.scss
 
 
@@ -194,7 +194,7 @@ locales
 
 When rendering internal links in your app using `<nuxt-link>`, you need to get proper URLs for the current locale. To do this, **nuxt-i18n** registers a global mixin that provides some helper functions:
 -   `localePath`  – Returns the localized URL for a given page. The first parameter can be either the path or name of the route or an object for more complex routes. A locale code can be passed as the second parameter to generate a link for a specific language:
-```js
+``` vue
 <nuxt-link :to="localePath('/')">{{ $t('home') }}</nuxt-link>
 <nuxt-link :to="localePath('index', 'en')">Homepage in English</nuxt-link>
 <nuxt-link :to="localePath('/app/profile')">Route by path to: {{ $t('Profile') }}</nuxt-link>
@@ -207,7 +207,7 @@ When rendering internal links in your app using `<nuxt-link>`, you need to get p
 <nuxt-link :to="localePath({ params: { slug: 'ball' } })">{{ category.title }}</nuxt-link>
 ```
 -   `switchLocalePath`  – Returns a link to the current page in another language:
-```js
+``` vue
 <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
 <nuxt-link :to="switchLocalePath('fr')">Français</nuxt-link>
 ```
