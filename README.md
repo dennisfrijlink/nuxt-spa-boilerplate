@@ -1,4 +1,5 @@
 
+  
 <p align="center">
   <img width="400" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/main/images/Nuxt-Spa.svg" alt="logo of Nuxt Single Page Application Repository">
 </p>
@@ -12,7 +13,7 @@
 
 ## 🧐 What's inside
 - [Quick start](#user-content--quick-start)
-- [What is a SPA?](#user-content--what-is-a-spa)
+- [What is a SPA?](#user-content--what-is-a-single-page-application)
 - [Mobile First](#user-content--breakpoints-mobile-first)
 - [Multi Language](#user-content--nuxt-i18n)
 
@@ -48,6 +49,10 @@
 A single-page application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default method of the browser loading entire new pages.
 
 In a SPA, all necessary HTML, JavaScript, and CSS code is either retrieved by the browser with a single page load,[1] or the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions. The page does not reload at any point in the process, nor does it transfer control to another page, although the location hash or the HTML5 History API can be used to provide the perception and navigability of separate logical pages in the application.
+
+<p align="center">
+  <img width="100%" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/main/images/SPA%20lifecycle.png" alt="Lifecycle of Single Page Application">
+</p>
 
 ## 📱 Breakpoints mobile first
 The scss folder located in  ``./assets/scss/``  contains two files to make it easier for web developers to prototype, build, scale, and maintain CSS for responsive websites:
