@@ -12,8 +12,8 @@
 
 ## 🧐 What's inside
 - [Quick start](#user-content--quick-start)
-- [What is a SPA?](#user-content--what-is-a-spa)]
-- [Mobile First](#user-content--breakpoints-mobile-first)]
+- [What is a SPA?](#user-content--what-is-a-spa)
+- [Mobile First](#user-content--breakpoints-mobile-first)
 - [Multi Language](#user-content--nuxt-i18n)
 
 ## ✨ Quick start
