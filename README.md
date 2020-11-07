@@ -13,7 +13,7 @@
 
 ## 🧐 What's inside
 - [Quick start](#user-content--quick-start)
-- [What is a SPA?](#user-content--what-is-a-single-page-application)
+- [What is a SPA](#user-content--what-is-a-single-page-application) 
 - [Mobile First](#user-content--breakpoints-mobile-first)
 - [Multi Language](#user-content--nuxt-i18n)
 
