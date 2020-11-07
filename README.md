@@ -12,7 +12,8 @@
 
 ## 🧐 What's inside
 - [Quick start](#user-content--quick-start)
-- [Mobile First](#user-content--breakpoints-mobile-first)
+- [What is a SPA?](#user-content--what-is-a-spa)]
+- [Mobile First](#user-content--breakpoints-mobile-first)]
 - [Multi Language](#user-content--nuxt-i18n)
 
 ## ✨ Quick start
@@ -43,6 +44,11 @@
     ```bash
     $ npm run generate
     ```
+## ⚙️ What is a Single Page Application
+A single-page application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default method of the browser loading entire new pages.
+
+In a SPA, all necessary HTML, JavaScript, and CSS code is either retrieved by the browser with a single page load,[1] or the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions. The page does not reload at any point in the process, nor does it transfer control to another page, although the location hash or the HTML5 History API can be used to provide the perception and navigability of separate logical pages in the application.
+
 ## 📱 Breakpoints mobile first
 The scss folder located in  ``./assets/scss/``  contains two files to make it easier for web developers to prototype, build, scale, and maintain CSS for responsive websites:
 ### SCSS Files
