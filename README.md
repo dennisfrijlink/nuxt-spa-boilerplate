@@ -1,4 +1,78 @@
 
+
+  
+<p align="center">
+  <img width="400" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/959061a8b1370b62a6b9e48549dc1d272564485e/images/Nuxt-SSG.svg" alt="logo of Nuxt Single Page Application Repository">
+</p>
+<h1 align="center">
+  Static Page Generation Boilerplate - Nuxt.js
+</h1>
+<p align="center">
+  A boilerplate for static site generation based on the Vue.js Framework, Nuxt.js
+  </a>
+</p>
+
+## 🧐 What's inside
+This Repository is an expansion of the [Nuxt SPA Boilerplate](https://github.com/dennisfrijlink/nuxt-spa-boilerplate) repository.
+
+- [Quick start](#user-content--quick-start)
+- [What is SSG?](#user-content-️-what-is-static-site-generation)
+
+## ✨ Quick start
+
+1.  **Clone this repository.**
+
+    ```sh
+    git clone https://github.com/dennisfrijlink/nuxt-ssg-boilerplate.git
+    ```
+
+2.  **Start developing.**
+
+    Navigate into your new site’s directory and start it up.
+
+    ```sh
+    cd nuxt-ssg-boilerplate/
+    npm install
+    npm run dev
+    ```
+
+3.  **Running!**
+
+    Your site is now running at `http://localhost:3000`!
+
+4.  **Generate for deploy**
+    
+    Generate a static project that will be located in the ``dist`` folder:
+    ```bash
+    $ npm run generate
+    ```
+## ⚙️ What is Static Site Generation
+Static Site Generators are a  hybrid approach to web development that allow you to build a powerful, server-based website locally on your computer but pre-builds the site into static files for deployment.
+
+### Advantages of Static Sites
+
+#### 1) Fast
+
+Static sites are fast! Since there are no database queries, no templates to render, and no client-server requests to process, a static site will always load faster.
+
+#### 2) Secure
+
+Dynamic websites are constantly at risk of attack. Drupal, which powers 5% of all websites (12+ million users) was  recently hacked  and Wordpress, which powers 26% of all websites, is notorious for frequent security vulnerabilities.
+
+#### 3) Cheap
+
+Static sites (like this one) costs pennies per month to run on services like Amazon S3. Dynamic sites require the setup, hosting, and maintenance of a server which is much, much more expensive.
+
+#### 4) Scalable
+
+Unexpected traffic surges can crash a dynamic site. A static site is much better prepared as delivering static pages consumes very little server resources.
+
+<p align="center">
+  <img width="100%" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/main/images/SSG%20lifecycle.png" alt="Lifecycle of Single Page Application">
+</p>
+
+
+
   
 <p align="center">
   <img width="400" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/main/images/Nuxt-Spa.svg" alt="logo of Nuxt Single Page Application Repository">
@@ -236,3 +310,11 @@ When rendering internal links in your app using `<nuxt-link>`, you need to get p
 <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
 <nuxt-link :to="switchLocalePath('fr')">Français</nuxt-link>
 ```
+Template:
+```html 
+<p>{{ $t('welcome') }}</p>
+``` 
+Output:
+```html 
+<p>A boilerplate for single page applications based on Nuxt.js</p>
+``` 
