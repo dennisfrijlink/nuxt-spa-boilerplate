@@ -137,19 +137,19 @@ As a parameter `$screen` we can put any screen size.
 .container {
     padding: 0 15px;
     
-	// 576px window width and more
+	/* 576px window width and more */
     @include sm {
         padding: 0 20px;
     }
     
-	// 992px window width and more
+	/* 992px window width and more */
     @include lg {
         margin-left: auto;
         margin-right: auto;
         max-width: 1100px;
     }
     
-	// 1400px window width and more
+	/* 1400px window width and more */
     @include rwd(1400) {
         margin-bottom: 20px;
         margin-top: 20px;
