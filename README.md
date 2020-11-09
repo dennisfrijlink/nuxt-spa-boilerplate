@@ -89,30 +89,30 @@ Now it’s time to create the most important element – mixins:
 
 // Small devices
 @mixin  sm {
-	@media (min-width: #{$screen-sm-min}) {
-		@content;
-	}	
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }	
 }
 
 // Medium devices
 @mixin  md {
-	@media (min-width: #{$screen-md-min}) {
-		@content;
-	}	
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }	
 }
 
 // Large devices
 @mixin  lg {
-	@media (min-width: #{$screen-lg-min}) {
-		@content;
-	}	
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }	
 }
 
 // Extra large devices
 @mixin  xl {
-	@media (min-width: #{$screen-xl-min}) {
-		@content;
-	}	
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }	
 }
 ````
 
@@ -123,9 +123,9 @@ I always build my websites in a mobile-first approach, so I don’t need to defi
 
 // Custom devices
 @mixin rwd($screen) {
-	@media (min-width: $screen+'px') {
-		@content;
-	}
+  @media (min-width: $screen+'px') {
+    @content;
+  }
 }
 ````
 As a parameter `$screen` we can put any screen size.
@@ -161,31 +161,31 @@ Nuxt-I18n is the Vue.js internationalization plugin optimized for using in Nuxt.
 // nuxt.config.js
 
 {
-	modules: [
-		'nuxt-i18n'
-	],
-	i18n: {
-		locales: [
-			{
-				code: 'en',
-				iso: 'en-US',
-				name: 'English',
-			},
-			{
-				code: 'nl',
-				iso: 'nl-NL',
-				name: 'Dutch',
-			}
-		],
-		defaultLocale: 'en',
-		vueI18n: {
-			fallbackLocale: 'en',
-			messages: {
-				en: require('./locales/en.json'),
-				nl: require('./locales/nl.json')
-			}
-		}
-	}
+  modules: [
+    'nuxt-i18n'
+  ],
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English',
+      },
+      {
+       code: 'nl',
+       iso: 'nl-NL',
+       name: 'Dutch',
+      }
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: require('./locales/en.json'),
+        nl: require('./locales/nl.json')
+      }
+    }
+  }
 }
 ```
 The locales are located in the ``~/locales`` folder:
@@ -201,7 +201,7 @@ locales
 
 {
 
-	"welcome": "Een boilerplate voor single page application gebasserd op Nuxt.js"
+  "welcome": "Een boilerplate voor single page application gebasserd op Nuxt.js"
 
 }
 ````
@@ -210,7 +210,7 @@ locales
 
 {
 
-	"welcome": "A boilerplate for single page applications based on Nuxt.js"
+  "welcome": "A boilerplate for single page applications based on Nuxt.js"
 
 }
 ````
