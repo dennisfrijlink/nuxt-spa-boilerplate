@@ -58,7 +58,7 @@ Nuxt.js automatically generates the `vue-router` configuration for you, based on
 
 To navigate between pages of your app, you should use the `NuxtLink` component.
 For all links to pages within your site, use `<NuxtLink>`. If you have links to other websites you should use the `<a>` tag. See below for an example:
-```
+```html
 <template>
   <main>
     <h1>Home page</h1>
@@ -75,6 +75,16 @@ There a three router modes `"hash" | "history" | "abstract"`:
 -   `history`: requires HTML5 History API and server config. See  [HTML5 History Mode](https://router.vuejs.org/guide/essentials/history-mode.html).
     
 -   `abstract`: works in all JavaScript environments, e.g. server-side with Node.js.  **The router will automatically be forced into this mode if no browser API is present.**
+
+For example:
+```js
+// nuxt.config.js
+
+export default {
+  router: {
+    mode: 'hash'
+  }
+}
 
 ## 📱 Breakpoints mobile first
 The scss folder located in  ``./assets/scss/``  contains two files to make it easier for web developers to prototype, build, scale, and maintain CSS for responsive websites:
