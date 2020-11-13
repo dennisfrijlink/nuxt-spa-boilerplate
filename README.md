@@ -85,6 +85,7 @@ export default {
     mode: 'hash'
   }
 }
+```
 
 ## 📱 Breakpoints mobile first
 The scss folder located in  ``./assets/scss/``  contains two files to make it easier for web developers to prototype, build, scale, and maintain CSS for responsive websites:
