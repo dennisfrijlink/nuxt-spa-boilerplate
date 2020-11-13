@@ -12,6 +12,7 @@
 ## 🧐 What's inside
 - [Quick start](#user-content--quick-start)
 - [What is a SPA](#user-content-️-what-is-a-single-page-application) 
+- [Nuxt Router](#user-content--nuxt-router)
 - [Mobile First](#user-content--breakpoints-mobile-first)
 - [Multi Language](#user-content--nuxt-i18n)
 
@@ -52,6 +53,29 @@ In a SPA, all necessary HTML, JavaScript, and CSS code is either retrieved by th
   <img width="100%" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/main/images/SPA%20lifecycle.png" alt="Lifecycle of Single Page Application">
 </p>
 
+##  🗺️ Nuxt Router
+Nuxt.js automatically generates the `vue-router` configuration for you, based on your provided Vue files inside the `pages` directory. That means you never have to write a router config again! Nuxt.js also gives you automatic code-splitting for all your routes.
+
+To navigate between pages of your app, you should use the `NuxtLink` component.
+For all links to pages within your site, use `<NuxtLink>`. If you have links to other websites you should use the `<a>` tag. See below for an example:
+```
+<template>
+  <main>
+    <h1>Home page</h1>
+    <NuxtLink to="/about">
+      About (internal link that belongs to the Nuxt App)
+    </NuxtLink>
+    <a href="https://nuxtjs.org">External Link to another page</a>
+  </main>
+</template>
+```
+There a three router modes `"hash" | "history" | "abstract"`:
+ -   `hash`: uses the URL hash for routing. Works in all Vue-supported browsers, including those that do not support HTML5 History API.
+    
+-   `history`: requires HTML5 History API and server config. See  [HTML5 History Mode](https://router.vuejs.org/guide/essentials/history-mode.html).
+    
+-   `abstract`: works in all JavaScript environments, e.g. server-side with Node.js.  **The router will automatically be forced into this mode if no browser API is present.**
+
 ## 📱 Breakpoints mobile first
 The scss folder located in  ``./assets/scss/``  contains two files to make it easier for web developers to prototype, build, scale, and maintain CSS for responsive websites:
 ### SCSS Files
@@ -89,30 +113,30 @@ Now it’s time to create the most important element – mixins:
 
 // Small devices
 @mixin  sm {
-  @media (min-width: #{$screen-sm-min}) {
-    @content;
-  }	
+	@media (min-width: #{$screen-sm-min}) {
+		@content;
+	}	
 }
 
 // Medium devices
 @mixin  md {
-  @media (min-width: #{$screen-md-min}) {
-    @content;
-  }	
+	@media (min-width: #{$screen-md-min}) {
+		@content;
+	}	
 }
 
 // Large devices
 @mixin  lg {
-  @media (min-width: #{$screen-lg-min}) {
-    @content;
-  }	
+	@media (min-width: #{$screen-lg-min}) {
+		@content;
+	}	
 }
 
 // Extra large devices
 @mixin  xl {
-  @media (min-width: #{$screen-xl-min}) {
-    @content;
-  }	
+	@media (min-width: #{$screen-xl-min}) {
+		@content;
+	}	
 }
 ````
 
@@ -123,9 +147,9 @@ I always build my websites in a mobile-first approach, so I don’t need to defi
 
 // Custom devices
 @mixin rwd($screen) {
-  @media (min-width: $screen+'px') {
-    @content;
-  }
+	@media (min-width: $screen+'px') {
+		@content;
+	}
 }
 ````
 As a parameter `$screen` we can put any screen size.
@@ -161,31 +185,31 @@ Nuxt-I18n is the Vue.js internationalization plugin optimized for using in Nuxt.
 // nuxt.config.js
 
 {
-  modules: [
-    'nuxt-i18n'
-  ],
-  i18n: {
-    locales: [
-      {
-        code: 'en',
-        iso: 'en-US',
-        name: 'English',
-      },
-      {
-       code: 'nl',
-       iso: 'nl-NL',
-       name: 'Dutch',
-      }
-    ],
-    defaultLocale: 'en',
-    vueI18n: {
-      fallbackLocale: 'en',
-      messages: {
-        en: require('./locales/en.json'),
-        nl: require('./locales/nl.json')
-      }
-    }
-  }
+	modules: [
+		'nuxt-i18n'
+	],
+	i18n: {
+		locales: [
+			{
+				code: 'en',
+				iso: 'en-US',
+				name: 'English',
+			},
+			{
+				code: 'nl',
+				iso: 'nl-NL',
+				name: 'Dutch',
+			}
+		],
+		defaultLocale: 'en',
+		vueI18n: {
+			fallbackLocale: 'en',
+			messages: {
+				en: require('./locales/en.json'),
+				nl: require('./locales/nl.json')
+			}
+		}
+	}
 }
 ```
 The locales are located in the ``~/locales`` folder:
@@ -201,7 +225,7 @@ locales
 
 {
 
-  "welcome": "Een boilerplate voor single page application gebasserd op Nuxt.js"
+	"welcome": "Een boilerplate voor single page application gebasserd op Nuxt.js"
 
 }
 ````
@@ -210,7 +234,7 @@ locales
 
 {
 
-  "welcome": "A boilerplate for single page applications based on Nuxt.js"
+	"welcome": "A boilerplate for single page applications based on Nuxt.js"
 
 }
 ````
