@@ -196,31 +196,31 @@ Nuxt-I18n is the Vue.js internationalization plugin optimized for using in Nuxt.
 // nuxt.config.js
 
 {
-	modules: [
-		'nuxt-i18n'
-	],
-	i18n: {
-		locales: [
-			{
-				code: 'en',
-				iso: 'en-US',
-				name: 'English',
-			},
-			{
-				code: 'nl',
-				iso: 'nl-NL',
-				name: 'Dutch',
-			}
-		],
-		defaultLocale: 'en',
-		vueI18n: {
-			fallbackLocale: 'en',
-			messages: {
-				en: require('./locales/en.json'),
-				nl: require('./locales/nl.json')
-			}
-		}
-	}
+  modules: [
+    'nuxt-i18n'
+  ],
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English',
+      },
+      {
+        code: 'nl',
+        iso: 'nl-NL',
+        name: 'Dutch',
+      }
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: require('./locales/en.json'),
+        nl: require('./locales/nl.json')
+      }
+    }
+  }
 }
 ```
 The locales are located in the ``~/locales`` folder:
@@ -235,18 +235,14 @@ locales
 // nl.json
 
 {
-
-	"welcome": "Een boilerplate voor single page application gebasserd op Nuxt.js"
-
+  "welcome": "Een boilerplate voor single page application gebasserd op Nuxt.js"
 }
 ````
 ````json
 // en.json
 
 {
-
-	"welcome": "A boilerplate for single page applications based on Nuxt.js"
-
+  "welcome": "A boilerplate for single page applications based on Nuxt.js"
 }
 ````
 
