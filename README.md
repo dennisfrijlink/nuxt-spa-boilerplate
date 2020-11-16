@@ -124,30 +124,30 @@ Now it’s time to create the most important element – mixins:
 
 // Small devices
 @mixin  sm {
-	@media (min-width: #{$screen-sm-min}) {
-		@content;
-	}	
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }	
 }
 
 // Medium devices
 @mixin  md {
-	@media (min-width: #{$screen-md-min}) {
-		@content;
-	}	
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }	
 }
 
 // Large devices
 @mixin  lg {
-	@media (min-width: #{$screen-lg-min}) {
-		@content;
-	}	
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }	
 }
 
 // Extra large devices
 @mixin  xl {
-	@media (min-width: #{$screen-xl-min}) {
-		@content;
-	}	
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }	
 }
 ````
 
@@ -158,9 +158,9 @@ I always build my websites in a mobile-first approach, so I don’t need to defi
 
 // Custom devices
 @mixin rwd($screen) {
-	@media (min-width: $screen+'px') {
-		@content;
-	}
+  @media (min-width: $screen+'px') {
+    @content;
+  }
 }
 ````
 As a parameter `$screen` we can put any screen size.
