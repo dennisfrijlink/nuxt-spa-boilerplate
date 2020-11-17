@@ -42,7 +42,7 @@ export default {
   modules: [
     ['@nuxtjs/axios', {
       baseURL: ''
-    }]
+    }],
     'nuxt-i18n'
   ],
 
