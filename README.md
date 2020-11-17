@@ -1,3 +1,4 @@
+
 <p align="center">
   <img width="400" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/main/images/Nuxt-Spa.svg" alt="logo of Nuxt Single Page Application Repository">
 </p>
@@ -13,6 +14,7 @@
 - [Quick start](#user-content--quick-start)
 - [What is a SPA](#user-content-️-what-is-a-single-page-application) 
 - [Nuxt Router](#user-content-️-nuxt-router)
+- [Data Fetching](#user-content--data-fetching)
 - [Mobile First](#user-content--breakpoints-mobile-first)
 - [Multi Language](#user-content--nuxt-i18n)
 
@@ -86,6 +88,78 @@ export default {
   }
 }
 ```
+## Data Fetching
+Nuxt.js supports traditional Vue patterns for loading data in your client-side app, such as fetching data in a component's `mounted()` hook.
+Nuxt has two hooks for asynchronous data loading:
+
+-   The  `fetch`  hook (Nuxt 2.12+). This hook can be placed on any component, and provides shortcuts for rendering loading states (during client-side rendering) and errors.
+-   The  `asyncData`  hook. This hook can only be placed on  _page_  components. Unlike  `fetch`, this hook does not display a loading placeholder during client-side rendering: instead, this hook blocks route navigation until it is resolved, displaying a page error if it fails.
+
+For example:
+```html
+<template>
+  <p v-if="$fetchState.pending">Fetching mountains...</p>
+  <p v-else-if="$fetchState.error">An error occurred :(</p>
+  <div v-else>
+    <h1>Nuxt Mountains</h1>
+    <ul>
+      <li v-for="mountain of mountains">{{ mountain.title }}</li>
+    </ul>
+    <button @click="$fetch">Refresh</button>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        mountains: []
+      }
+    },
+    async fetch() {
+      this.mountains = await fetch(
+        'https://api.nuxtjs.dev/mountains'
+      ).then(res => res.json())
+    }
+  }
+</script>
+```
+When using the `nuxtjs/axios` library you can define the baseURL in the `nuxt.config.js`:
+
+```js
+// nuxt.config.js
+
+export default {
+  modules: [
+    ['@nuxtjs/axios', {
+      baseURL: 'https://api.nuxtjs.dev/mountains'
+    }]
+  ]
+}
+```
+Now you can use the url of the API in all your pages and components without repeating it:
+```html
+<!-- pages/index.vue -->
+
+<template>
+  <div>{{ mountain.height }}</div>
+</template>
+
+<script>
+  export default {
+    name: 'index',
+    data() {
+      return {
+        mountain: ""
+      }
+    },
+    async fetch() {
+      this.mountain = await this.$axios.$get('/aconcagua')
+    }
+  }
+</script>
+```
+
 
 ## 📱 Breakpoints mobile first
 The scss folder located in  ``./assets/scss/``  contains two files to make it easier for web developers to prototype, build, scale, and maintain CSS for responsive websites:
