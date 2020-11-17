@@ -14,7 +14,7 @@
 - [Quick start](#user-content--quick-start)
 - [What is a SPA](#user-content-️-what-is-a-single-page-application) 
 - [Nuxt Router](#user-content-️-nuxt-router)
-- [Data Fetching](#user-content-data-fetching)
+- [Data Fetching](#user-content--data-fetching)
 - [Mobile First](#user-content--breakpoints-mobile-first)
 - [Multi Language](#user-content--nuxt-i18n)
 
