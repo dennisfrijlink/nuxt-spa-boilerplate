@@ -152,7 +152,7 @@ Now you can use the url of the API in all your pages and components without repe
   export default {
     name: 'index', 
     async asyncData({ $http }) {
-      const mountain = await $http.$get('/aconcagua')
+      const mountain = await $http.$get('/aconcagua') // https://api.nuxtjs.dev/mountains
       return { mountain }
     }
   }
