@@ -124,37 +124,36 @@ For example:
   }
 </script>
 ```
-When using the `nuxtjs/axios` library you can define the baseURL in the `nuxt.config.js`:
+When using the `nuxt/http` library you can define the baseURL in the `nuxt.config.js`:
 
 ```js
 // nuxt.config.js
 
 export default {
   modules: [
-    ['@nuxtjs/axios', {
+    ['@nuxt/http', {
       baseURL: 'https://api.nuxtjs.dev/mountains'
     }]
   ]
 }
 ```
-Now you can use the url of the API in all your pages and components without repeating it:
+Now you can use the url of the API in all your pages and components without repeating the base URL:
 ```html
 <!-- pages/index.vue -->
 
 <template>
-  <div>{{ mountain.height }}</div>
+  <div>
+    <h1>{{ mountain.slug }}</h1>
+    <img :src="mountain.image" :alt="mountain.slug">
+  </div>
 </template>
 
 <script>
   export default {
-    name: 'index',
-    data() {
-      return {
-        mountain: ""
-      }
-    },
-    async fetch() {
-      this.mountain = await this.$axios.$get('/aconcagua')
+    name: 'index', 
+    async asyncData({ $http }) {
+      const mountain = await $http.$get('/aconcagua') // https://api.nuxtjs.dev/mountains/aconcagua
+      return { mountain }
     }
   }
 </script>
