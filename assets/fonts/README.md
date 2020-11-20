@@ -1,0 +1,1 @@
+Folder for local font files (for example: .ttf or .otf files)

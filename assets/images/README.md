@@ -1,0 +1,1 @@
+Folder for local images or vector graphics
