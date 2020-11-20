@@ -26,9 +26,9 @@
     }
 }
 
-// Two extra large devices
-@mixin 2xl {
-    @media (min-width: #{$screen-2xl-min}) {
+// Fluid devices
+@mixin fluid {
+    @media (min-width: #{$screen-fluid-min}) {
         @content;
     }
 }
