@@ -188,6 +188,9 @@ $screen-lg-min: 1024px;
 
 /* Extra Large (xl) */
 $screen-xl-min: 1280px;
+
+/* Fluid */
+$screen-fluid-min: 1536px;
 ````
 
 Now it’s time to create the most important element – mixins:
@@ -219,6 +222,13 @@ Now it’s time to create the most important element – mixins:
 // Extra large devices
 @mixin  xl {
   @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }	
+}
+
+// Extra large devices
+@mixin  fluid {
+  @media (min-width: #{$screen-fluid-min}) {
     @content;
   }	
 }
