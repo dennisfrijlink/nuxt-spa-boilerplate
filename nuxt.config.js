@@ -33,8 +33,8 @@ export default {
   styleResources: {
     scss: [
       './assets/scss/*.scss',
+      './assets/scss/_mixins.scss',
       './assets/scss/breakpoints.scss',
-      './assets/scss/_mixins.scss'
     ]
   },
 
