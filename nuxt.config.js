@@ -30,11 +30,16 @@ export default {
     '@nuxtjs/style-resources'
   ],
 
+  css: [
+    './assets/fonts/fonts.css'
+  ],
+
   styleResources: {
     scss: [
       './assets/scss/*.scss',
       './assets/scss/_mixins.scss',
       './assets/scss/breakpoints.scss',
+
     ]
   },
 
