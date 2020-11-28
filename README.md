@@ -1,4 +1,5 @@
 
+
 <p align="center">
   <img width="400" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/main/images/Nuxt-Spa.svg" alt="logo of Nuxt Single Page Application Repository">
 </p>
@@ -17,6 +18,7 @@
 - [Data Fetching](#user-content--data-fetching)
 - [Mobile First](#user-content--breakpoints-mobile-first)
 - [Multi Language](#user-content--nuxt-i18n)
+- [Font Declaration](#user-content--fonts)
 
 ## ✨ Quick start
 
@@ -356,3 +358,26 @@ Output:
 ```html 
 <p>A boilerplate for single page applications based on Nuxt.js</p>
 ``` 
+## 🗛 Fonts
+There are two standard declarations for the font types:
+````css
+/* standard declrations */
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'DM sans';
+}
+body {
+  font-family: 'Arial';
+}
+````
+
+These font-families are defined in the same file `font.css`:
+````css
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('~assets/fonts/DM-Sans/DMSans-Regular.ttf') format('truetype');
+}
+````
+If you wanna use a different font family in a specified component you can always import the font file inside the `<style lang="scss" scoped></style>` of the .Vue component
