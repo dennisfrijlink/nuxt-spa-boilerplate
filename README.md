@@ -380,4 +380,4 @@ These font-families are defined in the same file `font.css`:
   src: url('~assets/fonts/DM-Sans/DMSans-Regular.ttf') format('truetype');
 }
 ````
-If you wanna use a different font family in a specified component you can always import the font file inside the `<style lang="scss" scoped></style>` of the .Vue component
+If you wanna use a different font family in a specified component you can always import the font file inside the `<style lang="scss" scoped></style>` of the `.vue` component
