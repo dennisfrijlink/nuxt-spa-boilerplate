@@ -20,7 +20,7 @@
 - [Mobile First](#user-content--breakpoints-mobile-first)
 - [Multi Language](#user-content--nuxt-i18n)
 - [Font Declaration](#user-content--fonts)
-- [Dark & Light theme](#user-content--dark-&-light-theme)
+- [Dark & Light theme](#user-content--dark-&amp;-light-theme)
 
 ## ✨ Quick start
 
