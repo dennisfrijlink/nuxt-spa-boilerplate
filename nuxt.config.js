@@ -30,16 +30,20 @@ export default {
     '@nuxtjs/style-resources'
   ],
 
+  purgeCSS: {
+    whiteList: () =>['dark-mode']
+  },
+
   css: [
-    './assets/fonts/fonts.css'
+    './assets/css/theme.css',
+    './assets/css/fonts.css'
   ],
 
   styleResources: {
     scss: [
       './assets/scss/*.scss',
       './assets/scss/_mixins.scss',
-      './assets/scss/breakpoints.scss',
-
+      './assets/scss/breakpoints.scss'
     ]
   },
 
@@ -48,7 +52,8 @@ export default {
     ['@nuxt/http', {
       baseURL: ''
     }],
-    'nuxt-i18n'
+    'nuxt-i18n',
+    '@nuxtjs/color-mode' //only necassary if color templates are included
   ],
 
   i18n: {}
