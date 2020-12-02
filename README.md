@@ -1,6 +1,5 @@
 
 
-
 <p align="center">
   <img width="400" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/main/images/Nuxt-Spa.svg" alt="logo of Nuxt Single Page Application Repository">
 </p>
@@ -20,7 +19,6 @@
 - [Mobile First](#user-content--breakpoints-mobile-first)
 - [Multi Language](#user-content--nuxt-i18n)
 - [Font Declaration](#user-content--fonts)
-- [Dark & Light theme](#user-content--dark-&-light-theme)
 
 ## ✨ Quick start
 
@@ -383,44 +381,3 @@ These font-families are defined in the same file `font.css`:
 }
 ````
 If you wanna use a different font family in a specified component you can use another specified font in from the `font.css` inside the `<style lang="scss" scoped></style>` of the `.vue` component
-
-## 🌗 Dark & Light theme
-🌑 Dark and 🌕 Light mode with auto detection made easy with the plugin `nuxt/color-mode`. 
-
-### Note
-If you don't need a dark/sepia/light mode you can always disable it by commenting this line in `nuxt.config.js`:
-````js
-modules: [
-  '@nuxtjs/color-mode'
-],
-````
-
-### Theme file
-The main theme file, located in `css/theme.css` contains all css rules specific for `nuxtjs/color-mode`. In the `theme.css` you declare all color variables per theme. So for example:
-
-````css
-:root {
-  --bg-color: #ffffff;
-}
-
-.dark-mode {
-  --bg-color: #21252b;
-}
-
-body {
-  background-color: var(--bg-color);
-  transition: background-color .3s;
-}
-````
-
-### Important
-We use [PurgeCSS](https://github.com/FullHuman/purgecss) for removing unused CSS selectors to optimize the performance of the web application. But PurgeCSS will delete all css rules of the theme(s) that are not selected.
-To resolve this issue you'll have to add the theme classes in to the white list of PurgeCSS. So for example:
-````js
-//nuxt.config.js
-
-purgeCSS: {
-  whiteList: () =>['dark-mode']
-},
-````
-Now PurgeCSS will ignore those classes by removing the unused CSS selectors
