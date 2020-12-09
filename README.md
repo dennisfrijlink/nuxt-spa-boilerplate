@@ -1,6 +1,3 @@
-
-
-
 <p align="center">
   <img width="400" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/main/images/Nuxt-Spa.svg" alt="logo of Nuxt Single Page Application Repository">
 </p>

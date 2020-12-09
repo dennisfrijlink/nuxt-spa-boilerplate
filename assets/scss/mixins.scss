@@ -31,8 +31,8 @@
 }
 
 // Fluid devices
-@mixin fluid {
-    @media (min-width: #{$screen-fluid-min}) {
+@mixin xxl {
+    @media (min-width: #{$screen-xxl-min}) {
         @content;
     }
 }
