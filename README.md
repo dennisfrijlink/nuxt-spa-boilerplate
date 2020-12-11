@@ -1,3 +1,4 @@
+
 <p align="center">
   <img width="400" src="https://raw.githubusercontent.com/dennisfrijlink/development-utilities/main/images/Nuxt-Spa.svg" alt="logo of Nuxt Single Page Application Repository">
 </p>
@@ -168,8 +169,10 @@ The scss folder located in  ``./assets/scss/``  contains two files to make it ea
 assets
 │
 └─── scss
+	│
+    └─── main.scss
     │
-    └─── _mixins.scss
+    └─── mixins.scss
     │
     └─── breakpoints.scss
 ```
@@ -190,13 +193,13 @@ $screen-lg-min: 1024px;
 /* Extra Large (xl) */
 $screen-xl-min: 1280px;
 
-/* Fluid */
-$screen-fluid-min: 1536px;
+/* 2 Extra Large (xxl) */
+$screen-xxl-min: 1536px;
 ````
 
 Now it’s time to create the most important element – mixins:
 ````scss
-// _mixins.scss
+// mixins.scss
 
 
 // Small devices
@@ -227,9 +230,9 @@ Now it’s time to create the most important element – mixins:
   }	
 }
 
-// Extra large devices
-@mixin  fluid {
-  @media (min-width: #{$screen-fluid-min}) {
+// XXL devices
+@mixin  xxl{
+  @media (min-width: #{$screen-xxl-min}) {
     @content;
   }	
 }
@@ -237,7 +240,7 @@ Now it’s time to create the most important element – mixins:
 
 I always build my websites in a mobile-first approach, so I don’t need to define the smallest screen size (xs – extra small) and I write my SCSS code first for the smallest devices and next for the largest. Sometimes we also need to define some styles beyond the rigidly defined breakpoints. Let’s add one more mixin – I called it “rwd”:
 ````scss
-// _mixins.scss
+// mixins.scss
 
 
 // Custom devices
@@ -307,7 +310,7 @@ Nuxt-I18n is the Vue.js internationalization plugin optimized for using in Nuxt.
   }
 }
 ```
-The locales are located in the ``~/locales`` folder:
+The locales are located in the ``~/locales`` folder, for example:
 ````
 locales
 │
@@ -332,7 +335,7 @@ locales
 
 When rendering internal links in your app using `<nuxt-link>`, you need to get proper URLs for the current locale. To do this, **nuxt-i18n** registers a global mixin that provides some helper functions:
 -   `localePath`  – Returns the localized URL for a given page. The first parameter can be either the path or name of the route or an object for more complex routes. A locale code can be passed as the second parameter to generate a link for a specific language:
-``` vue
+``` html
 <nuxt-link :to="localePath('/')">{{ $t('home') }}</nuxt-link>
 <nuxt-link :to="localePath('index', 'en')">Homepage in English</nuxt-link>
 <nuxt-link :to="localePath('/app/profile')">Route by path to: {{ $t('Profile') }}</nuxt-link>
@@ -345,7 +348,7 @@ When rendering internal links in your app using `<nuxt-link>`, you need to get p
 <nuxt-link :to="localePath({ params: { slug: 'ball' } })">{{ category.title }}</nuxt-link>
 ```
 -   `switchLocalePath`  – Returns a link to the current page in another language:
-``` vue
+``` html
 <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
 <nuxt-link :to="switchLocalePath('fr')">Français</nuxt-link>
 ```
@@ -408,6 +411,16 @@ body {
   background-color: var(--bg-color);
   transition: background-color .3s;
 }
+````
+
+Now you can add the option to select a theme:
+````html
+<template>
+    <select v-model="$colorMode.preference">
+      <option value="system">System</option>
+      <option value="dark">Dark</option>
+    </select>
+</template>
 ````
 
 ### Important

@@ -35,8 +35,8 @@ export default {
   },
 
   css: [
+    './assets/css/fonts.css',
     './assets/css/theme.css',
-    './assets/css/fonts.css'
   ],
 
   styleResources: {
