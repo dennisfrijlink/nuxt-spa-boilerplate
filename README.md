@@ -169,7 +169,7 @@ The scss folder located in  ``./assets/scss/``  contains two files to make it ea
 assets
 │
 └─── scss
-	│
+	  │
     └─── main.scss
     │
     └─── mixins.scss
