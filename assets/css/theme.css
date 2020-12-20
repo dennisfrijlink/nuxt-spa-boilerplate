@@ -1,12 +1,4 @@
-:root {
-    --bg-color: #ffffff;
-}
-
-.dark-mode {
-    --bg-color: #21252b;
-}
-
-body {
-    background-color: var(--bg-color);
-    transition: background-color .3s;
+html, body {
+    margin: 0;
+    padding: 0;
 }
