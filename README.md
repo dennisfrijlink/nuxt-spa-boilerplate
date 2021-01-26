@@ -167,7 +167,14 @@ Now you can use the url of the API in all your pages and components without repe
   }
 </script>
 ```
+You can use ``keep-alive`` directive in ``<nuxt/>`` and ``<nuxt-child/>`` component to save ``fetch`` calls on pages you already visited:
+```html
+<!-- layouts/default.vue -->
 
+<template>
+  <nuxt keep-alive />
+</template>
+```
 
 ## 📱 Breakpoints mobile first
 The scss folder located in  ``./assets/scss/``  contains two files to make it easier for web developers to prototype, build, scale, and maintain CSS for responsive websites:
