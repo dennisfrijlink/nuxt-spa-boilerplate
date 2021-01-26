@@ -47,12 +47,14 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    ['@nuxt/http', {
-      baseURL: ''
-    }],
+    '@nuxtjs/axios',
     'nuxt-i18n',
     '@nuxtjs/color-mode' //only necassary if color templates are included
   ],
+
+  axios: {
+    browserBaseURL: ''
+  },
 
   i18n: {}
 }

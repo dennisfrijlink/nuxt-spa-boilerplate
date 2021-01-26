@@ -119,24 +119,26 @@ For example:
       }
     },
     async fetch() {
-      this.mountains = await fetch(
+      this.mountains = await this.$axios.$get(
         'https://api.nuxtjs.dev/mountains'
-      ).then(res => res.json())
+      )
     }
   }
 </script>
 ```
-When using the `nuxt/http` library you can define the baseURL in the `nuxt.config.js`:
+When using the `nuxt/axios` library you can define the baseURL in the `nuxt.config.js`:
 
 ```js
 // nuxt.config.js
 
 export default {
   modules: [
-    ['@nuxt/http', {
-      baseURL: 'https://api.nuxtjs.dev/'
-    }]
-  ]
+    '@nuxtjs/axios'
+  ],
+
+  axios: {
+    browserBaseURL: 'https://api.nuxtjs.dev/'
+  },
 }
 ```
 Now you can use the url of the API in all your pages and components without repeating the base URL:
@@ -152,10 +154,15 @@ Now you can use the url of the API in all your pages and components without repe
 
 <script>
   export default {
-    name: 'index', 
-    async asyncData({ $http }) {
-      const mountain = await $http.$get('/mountains/aconcagua') // https://api.nuxtjs.dev/mountains/aconcagua
-      return { mountain }
+    name: 'index',
+    data() {
+      return {
+        mountain: null
+      }
+    }, 
+    async fetch() {
+      const mountain = await this.$axios.$get('/mountains/aconcagua') // https://api.nuxtjs.dev/mountains/aconcagua
+      this.mountain = mountain;
     }
   }
 </script>
