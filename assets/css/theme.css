@@ -9,4 +9,9 @@
 
 html {
     box-sizing: border-box;
+    overflow-x: hidden !important;
+}
+
+body {
+    width: 100vw;
 }
