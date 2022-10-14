@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #111827;
+    background-color: red;
 
     .hero-logo {
       svg {
